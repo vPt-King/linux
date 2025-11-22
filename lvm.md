@@ -143,9 +143,8 @@ Hoặc:
 Các bước tạo LVM: Physical volume > Volume group > Logical volume
 
 Tạo physical volume
-{
-
-# parted /dev/sdb
+```
+parted /dev/sdb
 (parted) print
 (parted) mklabel gpt
 (parted) unit GB
@@ -170,18 +169,15 @@ mount /dev/vg_data/lv_data /app
  + chỉnh file fstab để tự nhận logical volume khi boot:
 vim /etc/fstab
 /dev/vg_data/lv_data  /app                      xfs (ext4)      defaults        0 0
-
-}
+```
 
 ## Extend 1 volume group
-{
-    vgextend vg_test /dev/sdc1
+```
+    vgextend vg_test /dev/sdc1`
     lvextend -l +100%FREE /dev/ubuntu-vg/ubuntu-lv
     df -Th ( Check ext4 hay xfs)
     resize2fs /dev/ubuntu-vg/ubuntu-lv hoac xfs_growfs /dev/mapper/rhel-root
-}
+```
 
 ## Xóa phân vùng có sẵn
-{
-    wipefs -a /dev/sdb
-}
+`wipefs -a /dev/sdb`
