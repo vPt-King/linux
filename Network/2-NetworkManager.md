@@ -1,3 +1,4 @@
+Network manager hay được sử dụng trong RHEL/centos làm mặc định
 Trong NetworkManager, trạng thái managed và unmanaged dùng để chỉ NetworkManager có đang quản lý một interface mạng hay không. Giải thích chi tiết:
 
 1. Managed
