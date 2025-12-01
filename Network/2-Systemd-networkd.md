@@ -21,3 +21,5 @@ networkctl
 ```
 networkctl là CLI để xem trạng thái interface:
 `networkctl status eth0`
+
+Trên ubuntu thì netplan quản lí cấu hình IP, còn systemd-resolved quản lí backend
